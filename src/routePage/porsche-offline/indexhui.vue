@@ -1,0 +1,548 @@
+<template >
+  <div class="parsche-offline">
+      <a @click="back" class="back"><i class="back-con"><img :src="require('../../common/image/back.png')" alt=""></i></a>
+    <div class="parsche-offline-top">
+      <div class="parsche-offline-nr">
+          <div class="parsche-offline-navigation">
+            <ul>
+              <li>
+                  <router-link :to="{ path: '/offline' }" class="navigation1"></router-link>
+                <span @click="tooffline()">活动招募</span>
+              </li>
+              <li>
+                <router-link :to="{ path: '/offlinehui' }" class="navigation2"></router-link>
+                <span @click="toofflinehui()">精彩集锦</span>
+              </li>
+            </ul>
+              <div class="block dataBox el-icon-date">
+              </div>
+            <div class="parsche-offline-lb">
+              <div class="swiper-slide" v-for="list in offlinelist">
+              <div class="swiper-slide-offlineimg">
+                <img class="cover" width="100%" height="100%" :src="PORSCHE_HOST+list.picture_path" alt="">
+              </div>
+              <div class="swiper-slide-title">
+                  <div class="slide-title">
+                    <div class="slide-title-nr">
+                      <div class="slide-title-left">
+                        <h3>{{list.title}}</h3>
+                      </div>
+
+                      <div class="clear"></div>
+                    </div>
+                    </div>
+              </div>
+              <div class="swiper-slide-applicants">
+                  <div class="slide-applicants">
+                      <div class="slide-applicants-left">
+                          <div class="applicants-left-a">
+                              <div>
+                                  <h5>{{timedata(list.start_time)}}&nbsp;-&nbsp;{{timedata(list.end_time)}}</h5>
+                                  <h5 v-if="list.sponsor != '' ">主办方:{{list.sponsor}}</h5>
+                              </div>
+                              <div>
+                                  <h5 v-if="list.city != ''">线下活动 - {{list.city}}</h5>
+                              </div>
+                          </div>
+                        <div class="applicants-left-b">
+                            <h5>{{timedata(list.start_time)}}-{{timedata(list.end_time)}}</h5>
+                            <h5 v-if="list.city != ''">线下活动 - {{list.city}}</h5>
+                            <h5 v-if="list.sponsor != ''">主办方:{{list.sponsor}}</h5>
+                        </div>
+                      </div>
+                      <div class="slide-applicants-right">
+                          <div class="applicants-right-a">
+                              <div class="applicants-right-number">
+                                  <span style="width: 25px;height: 25px;display: inline-block"><img :src="likeimg" style="width:100%" alt=""></span>
+                                  <span><span class="number-data">{{list.upvote_count+list.visit_count}}</span><span>&nbsp;人</span></span>
+                              </div>
+                          </div>
+                        <div class="applicants-right-b">
+                          <router-link :to="{ path: '/gather/'+list.uuid }" class="ui-btns btn-arrows but-col">查看详情</router-link>
+                        </div>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+
+    <!--<div class="parsche-offline-bottom">
+          <div class="offline-bottom">
+            <router-link  :to="{ path: '/dealer' }" class="bottom-a">经销商查询</router-link>
+            <router-link  :to="{ path: '/testdrive' }"class="bottom-a">试驾申请</router-link>
+          </div>
+    </div>-->
+  </div>
+</template>
+
+<script>
+import Swiper from 'swiper';
+import 'swiper/dist/css/swiper.min.css'
+import {PORSCHE_HOST} from '../../common/js/host';
+export default {
+  components:{
+
+  },
+  data(){
+    return{
+        PORSCHE_HOST,
+        offlinelist:[],
+        mySwiper:{},
+        currentPage:1,
+        offset:0,
+        count:10,
+        IsBottom:false,
+        likeimg:'',
+    }
+  },
+  methods:{
+      back(){
+          let _this = this;
+          _this.$router.push('/home');
+      },
+    tooffline (){
+      this.$router.push("/offline")
+    },
+    toofflinehui (){
+      this.$router.push("/offlinehui")
+    },
+    timedata(time){
+    return  new Date(time).getFullYear() + '/' + (new Date(time).getMonth() + 1) + '/' + new Date(time).getDate()
+    },
+    getofflinelistA(){
+
+      let _this = this;
+      $.ajax({
+              type: 'post',
+              data:{
+                  offset:_this.offset,
+                  count:_this.count,
+              },
+              url: PORSCHE_HOST+'/member/offline/history/list',
+              success: function (res) {
+                if(res.code === "1004") {
+                    _this.$router.push('/login');
+                    return ;
+                }
+                if(res.code === "1001") {
+                    _this.currentPage = _this.currentPage +1
+                    if(_this.offset == 0){
+                        _this.offlinelist = res.data
+                        _this.IsBottom = true;
+                    } else {
+                        _this.offlinelist = _this.offlinelist.concat(res.data)
+                        _this.IsBottom = true;
+                    }
+                }
+                  if(res.code === "1002" || res.code === "1003" || res.code === "1009") {
+                    alert(res.message);
+                    return false;
+                  }
+              },
+              error: function (res) {
+                  console.log("网络连接错误!")
+              }
+          });
+    },
+      loadMore(){
+          this.count = 10
+          this.offset = (parseInt(this.currentPage) - 1) * this.count
+          this.getofflinelistA();
+      },
+      show() {
+          if (document.body.offsetWidth > 750) {
+              this.likeimg = require('../../common/image/pcimg/likeimg.png');
+          } else {
+              this.likeimg = require('../../common/image/appimg/likeimg.png');
+          }
+      },
+
+  },
+  mounted(){
+    this.getofflinelistA();
+    this.show();
+      let _this = this
+      $(window).scroll(function() {
+          if ($(document).scrollTop()+1 >= $(document).height() - $(window).height()) {
+              console.log($(document).height() - $(window).height())
+              //isBottom = true;
+              if(_this.IsBottom){
+                  _this.IsBottom = false;
+                  // console.log(212313)
+                  _this.loadMore()
+              }
+
+          }
+      });
+    /*setTimeout(function(){
+      let _this = this
+      _this.mySwiper = new Swiper('.swiper-container2A', {
+          direction: 'horizontal',
+          loop: true,
+          autoplay : 6000,
+          prevButton:'.swiper-button-prev',
+          nextButton:'.swiper-button-next',
+          pagination : '.swiper-pagination',
+          autoplayDisableOnInteraction : false,
+          paginationClickable: true,
+      });
+    },2000)*/
+  },
+  created() {
+
+  }
+
+
+}
+</script>
+
+<style scoped>
+    .dataBox {
+        content: "";
+        background:url('../../common/image/rili2.png')  no-repeat;
+        background-size: 80% 80%;
+        width: 25px;
+        height: 32px;
+        display: flex;
+        position: absolute;
+        padding: 4px 10px 4px 0px;
+    }
+.parsche-offline-lb {
+  overflow: hidden;
+}
+.swiper-container2B {
+  display: none;
+}
+.swiper-slide-offlineimg {
+  width: auto;
+  height: 550px;
+}
+
+
+.offline-bottom .bottom-a:first-child {
+  margin-right: 20px;
+}
+.offline-bottom .bottom-a:last-child{
+  margin-left: 20px;
+}
+.bottom-a {
+  text-align: center;
+  width: 145px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  border: 1px solid #fff;
+  letter-spacing: 2px;
+}
+.parsche-offline-bottom {
+  background: #15577e;
+  padding:25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.applicants-right-number {
+  margin-bottom: 5px;
+}
+.number-data {
+  font-size: 28px!important;
+  color: #000;
+}
+.applicants-right-a {
+  margin-right: 15px;
+}
+
+.slide-applicants-right {
+  float: right;
+  display: flex;
+    text-align: right;
+}
+.slide-applicants {
+  padding: 15px 0px;
+}
+.applicants-left-b{
+    display: none;
+}
+
+.applicants-left-a h5{
+    font-size: 14px;
+    color: #000;
+    line-height: 18px;
+    float: left;
+}
+.applicants-left-a h5:nth-child(2n+1){
+    margin-right: 20px;
+}
+
+
+.slide-applicants-left {
+  float: left;
+  display: flex;
+}
+.slide-title-nr {
+  padding: 15px 30px;
+}
+.swiper-slide-applicants {
+  position: relative;
+}
+.clear {
+  clear: both;
+}
+.slide-title  {
+  /*padding: 15px 30px;*/
+  position: absolute;
+  top: -55px;
+  background: #000000;
+  background-color: rgba(0,0,0,.3);
+  width: 100%;
+}
+.slide-title-left {
+  float: left;
+}
+
+.slide-title h3 {
+  font-size: 20px;
+  color: #fff;
+  height: 25px;
+  line-height: 25px;
+}
+.applicants-map {
+  position: relative;
+}
+.applicants-map:before {
+    content: "";
+    background:url('../../common/image/pcimg/xxhd-map.png') 100% no-repeat;
+    width: 25px;
+    height: 32px;
+    display: flex;
+    position: relative;
+}
+.btn-arrows:after {
+    content: "";
+    border: 5px solid transparent;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-left-color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -5px;
+}
+.ui-btns {
+  color: #fff;
+  width: 150px;
+  font-size: 18px;
+  text-align: center;
+  height: 36px;
+  line-height: 38px;
+  background: #9a0000;
+  display: inline-block;
+  cursor: pointer;
+  border: 0 none;
+  padding: 0;
+  position: relative;
+}
+
+
+.swiper-slide-title {
+  position: relative;
+  /*bottom: 0px;
+  background: #0000006b;
+  width: 100%;*/
+}
+.cover{
+  object-fit: cover;
+}
+.parsche-offline-top {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 86%;
+}
+.parsche-offline-nr {
+  background: #fff;
+  width: 100%;
+}
+.parsche-offline-btn {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offline-verification-texttel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.offline-verification-texttel label{
+  width: 70px;
+  border: 1px solid #b7b7b7;
+  height: 30px;
+  line-height: 30px;
+  border-right: 0px;
+  padding: 1px 10px;
+  font-size: 14px;
+  color: #796e6e;
+}
+.offline-verification-texttel input{
+  border: 1px solid #b7b7b7;
+  height: 30px;
+  font-size: 15px;
+  color: #796e6e;
+  padding-left: 10px;
+}
+.offline-verification-texth3 {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin: 20px 0px;
+  text-align: center;
+}
+.offline-verification-texth3 h3 {
+  margin: 5px 0px;
+}
+.parsche-offline-navigation {
+  width: 100%;
+  /*overflow: hidden;*/
+  height: auto;
+  position: relative;
+}
+.parsche-offline-navigation ul{
+  display: flex;
+  margin: 0px!important;
+    background: #eff0f1;
+}
+
+.parsche-offline-navigation ul li{
+  width: 46.5%;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+}
+.parsche-offline-navigation ul li a{
+  display: block;
+    cursor: pointer;
+}
+.swiper-pagination {
+  display: none;
+}
+.parsche-offline-navigation ul li span{
+  position: relative;
+  top: -55px;
+  color: #000;
+    cursor: pointer;
+}
+
+.parsche-offline-navigation ul li:last-child span{
+  position: relative;
+  top: -55px;
+  color: #fff;
+
+}
+
+.navigation1 {
+  border-bottom: 55px solid #eff0f1;
+  border-left: 0px solid #eff0f1;
+  border-right: 55px solid #eff0f1;
+}
+.navigation2 {
+  border-bottom: 55px solid #950014;
+  border-left: 20px solid #950014;
+  border-right: 55px solid #950014;
+}
+.slide-applicants {
+  /*margin-bottom: 10px;*/
+}
+
+@media (max-width: 768px) {
+    .applicants-left-a{
+        display: none;
+    }
+    .applicants-left-b{
+        display: block;
+    }
+    .applicants-left-b h5{
+        font-size: 14px;
+        color: #000;
+        line-height: 18px;
+    }
+    .parsche-offline-navigation ul li{
+        width: 42%;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+    }
+  .offline-bottom .bottom-a:first-child {
+    margin-right: 5px;
+  }
+  .parsche-offline-top {
+    width: 100%;
+  }
+  .slide-applicants {
+    /*margin-bottom: 30px;*/
+}
+  .offline-bottom .bottom-a:last-child{
+    margin-left: 5px;
+  }
+  .bottom-a {
+    width: 130px;
+  }
+  .slide-title {
+    /*display: none;*/
+  }
+  .slide-title-nr {
+      padding: 15px 10px;
+  }
+  .slide-title-left h3 {
+    font-size: 14px;
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+  }
+  .slide-applicants-left{
+    display: block;
+    width: 60%;
+    overflow: hidden;
+  }
+   .slide-applicants-right {
+    display: block;
+       width: 40%;
+  }
+
+  .applicants-map {
+    display: inline-block;
+  }
+
+  .swiper-slide-offlineimg {
+    width: auto;
+    height: 250px;
+  }
+  .applicants-right-a {
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+  .swiper-pagination {
+    display: block;
+  }
+  .ui-btns {
+    height: 30px;
+    line-height: 30px;
+    width: 120px;
+    font-size: 16px;
+  }
+  .swiper-slide-applicants {
+    margin: 0 15px;
+  }
+}
+</style>

@@ -1,0 +1,1317 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, let,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+video{
+        width:100% !important;
+        height:100% !important;
+        margin-top:-4px;
+        margin-bottom:-3px;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  /*-webkit-user-select: none;
+  user-select: none;*/
+}
+
+    /*@font-face {
+       font-family: "PorscheNextWLa";
+       font-weight: 100;
+       font-style: normal;
+       src: url("../../common/font/PorscheNextWLa-Thin.eot");
+       src: url("../../common/font/PorscheNextWLa-Thin.ttf");
+       src: url("../../common/font/PorscheNextWLa-Thin.woff");
+     }
+       @font-face {
+        font-family: "PorscheNextWLa";
+        font-weight: 100;
+        font-style: normal;
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.eot");
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.svg#PorscheNextWLa-Thin") format("svg");
+        }
+
+        @font-face {
+        font-family: "PorscheNextWLa";
+        font-weight: 100;
+        font-style: italic;
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.eot");
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.svg#PorscheNextWLa-ThinItalic") format("svg");
+        }
+
+        @font-face {
+        font-family: "PorscheNextWLa";
+        font-weight: normal;
+        font-style: normal;
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.eot");
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.svg#PorscheNextWLa-Regular") format("svg");
+        }
+
+        @font-face {
+        font-family: "PorscheNextWLa";
+        font-weight: normal;
+        font-style: italic;
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.eot");
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.svg#PorscheNextWLa-Italic") format("svg");
+        }
+
+        @font-face {
+        font-family: "PorscheNextWLa";
+        font-weight: bold;
+        font-style: normal;
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.eot");
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.svg#PorscheNextWLa-Bold") format("svg");
+        }
+
+        @font-face {
+        font-family: "PorscheNextWLa";
+        font-weight: bold;
+        font-style: italic;
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.eot");
+        src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.svg#PorscheNextWLa-Bold") format("svg");
+        }*/
+        @font-face {
+                font-family: "PNewsGothic";
+                src: url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW02-Reg.eot');
+                src: url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW02-Reg.eot?#iefix') format('eot'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW02-Reg.woff') format('woff'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW02-Reg.ttf') format('truetype'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW02-Reg.svg') format('svg');
+                }
+
+                @font-face {
+                font-family: "PNewsGothicKY";
+                src: url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW10-Reg.eot');
+                src: url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW10-Reg.eot?#iefix') format('eot'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW10-Reg.woff') format('woff'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW10-Reg.ttf') format('truetype'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW10-Reg.svg') format('svg');
+                }
+
+                @font-face {
+                font-family: "PNewsGothicGR";
+                src: url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW15-Reg.eot');
+                src: url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW15-Reg.eot?#iefix') format('eot'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW15-Reg.woff') format('woff'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW15-Reg.ttf') format('truetype'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW15-Reg.svg') format('svg');
+                }
+
+                @font-face {
+                font-family: "PNewsGothicBold";
+                src: url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW02-Bd.eot');
+                src: url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW02-Bd.eot?#iefix') format('eot'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW02-Bd.woff') format('woff'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW02-Bd.ttf') format('truetype'), url('https://www.porsche.com/css/fonts/news-gothic/NewsGothforPorscheW02-Bd.svg') format('svg');
+                }
+
+                @font-face {
+                font-family: "PFranklinGothicCnd";
+                src: url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW02-Cn.eot');
+                src: url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW02-Cn.eot?#iefix') format('eot'), url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW02-Cn.woff') format('woff'), url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW02-Cn.ttf') format('truetype'), url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW02-Cn.svg') format('svg');
+                }
+
+                @font-face {
+                font-family: "PFranklinGothicCndKY";
+                src: url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW10-Cn.eot');
+                src: url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW10-Cn.eot?#iefix') format('eot'), url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW10-Cn.woff') format('woff'), url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW10-Cn.ttf') format('truetype'), url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW10-Cn.svg') format('svg');
+                }
+
+                @font-face {
+                font-family: "PFranklinGothicCndGR";
+                src: url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW15-Cn.eot');
+                src: url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW15-Cn.eot?#iefix') format('eot'), url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW15-Cn.woff') format('woff'), url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW15-Cn.ttf') format('truetype'), url('https://www.porsche.com/css/fonts/franklin-gothic/FrankGothforPorscheW15-Cn.svg') format('svg');
+                }
+
+                @font-face {
+                font-family: "pag-iconfont";
+                src: url('https://www.porsche.com/fonts/pag-iconfont/pag-iconfont.eot');
+                src: url('https://www.porsche.com/fonts/pag-iconfont/pag-iconfont.eot?#iefix') format('eot'), url('https://www.porsche.com/fonts/pag-iconfont/pag-iconfont.woff') format('woff'), url('https://www.porsche.com/fonts/pag-iconfont/pag-iconfont.ttf') format('truetype'), url('https://www.porsche.com/fonts/pag-iconfont/pag-iconfont.svg') format('svg');
+                }
+
+                @font-face {
+                font-family: "PorscheNextWLa";
+                font-weight: 100;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-Thin.svg#PorscheNextWLa-Thin") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWLa";
+                font-weight: 100;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-ThinItalic.svg#PorscheNextWLa-ThinItalic") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWLa";
+                font-weight: normal;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-Regular.svg#PorscheNextWLa-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWLa";
+                font-weight: normal;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-Italic.svg#PorscheNextWLa-Italic") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWLa";
+                font-weight: bold;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.svg#PorscheNextWLa-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWLa";
+                font-weight: bold;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebLatin/Fonts/PorscheNextWLa-Bold.svg#PorscheNextWLa-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWCy";
+                font-weight: 100;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Thin.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Thin.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Thin.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Thin.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebCyril/Fonts/PorscheNextWCy-Thin.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebCyril/Fonts/PorscheNextWCy-Thin.svg#PorscheNextWCy-Thin") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWCy";
+                font-weight: 100;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-ThinItalic.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-ThinItalic.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-ThinItalic.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-ThinItalic.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebCyril/Fonts/PorscheNextWCy-ThinItalic.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebCyril/Fonts/PorscheNextWCy-ThinItalic.svg#PorscheNextWCy-ThinItalic") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWCy";
+                font-weight: normal;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebCyril/Fonts/PorscheNextWCy-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebCyril/Fonts/PorscheNextWCy-Regular.svg#PorscheNextWCy-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWCy";
+                font-weight: normal;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Italic.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Italic.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Italic.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Italic.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebCyril/Fonts/PorscheNextWCy-Italic.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebCyril/Fonts/PorscheNextWCy-Italic.svg#PorscheNextWCy-Italic") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWCy";
+                font-weight: bold;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebCyril/Fonts/PorscheNextWCy-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebCyril/Fonts/PorscheNextWCy-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebCyril/Fonts/PorscheNextWCy-Bold.svg#PorscheNextWCy-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWCy";
+                font-weight: bold;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWLa-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebCyril/Fonts/PorscheNextWLa-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebCyril/Fonts/PorscheNextWLa-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebCyril/Fonts/PorscheNextWLa-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebCyril/Fonts/PorscheNextWLa-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebCyril/Fonts/PorscheNextWLa-Bold.svg#PorscheNextWLa-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWGr";
+                font-weight: 100;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Thin.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Thin.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Thin.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Thin.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebGreek/Fonts/PorscheNextWGr-Thin.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebGreek/Fonts/PorscheNextWGr-Thin.svg#PorscheNextWGr-Thin") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWGr";
+                font-weight: 100;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-ThinItalic.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-ThinItalic.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-ThinItalic.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-ThinItalic.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebGreek/Fonts/PorscheNextWGr-ThinItalic.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebGreek/Fonts/PorscheNextWGr-ThinItalic.svg#PorscheNextWGr-ThinItalic") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWGr";
+                font-weight: normal;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebGreek/Fonts/PorscheNextWGr-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebGreek/Fonts/PorscheNextWGr-Regular.svg#PorscheNextWGr-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWGr";
+                font-weight: normal;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Italic.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Italic.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Italic.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Italic.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebGreek/Fonts/PorscheNextWGr-Italic.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebGreek/Fonts/PorscheNextWGr-Italic.svg#PorscheNextWGr-Italic") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWGr";
+                font-weight: bold;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.svg#PorscheNextWGr-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWGr";
+                font-weight: bold;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/EOT-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-2-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/WOFF-TT/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/OT-TTF-Web/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Gr-Cyr_Web/SVG-PS/Porsche Next WebGreek/Fonts/PorscheNextWGr-Bold.svg#PorscheNextWGr-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWAr";
+                font-weight: normal;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.svg#PorscheNextWAr-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPa";
+                font-weight: normal;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.svg#PorscheNextWPa-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPe";
+                font-weight: normal;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.svg#PorscheNextWPe-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWUr";
+                font-weight: normal;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.svg#PorscheNextWUr-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWAr";
+                font-weight: bold;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.svg#PorscheNextWAr-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPa";
+                font-weight: bold;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.svg#PorscheNextWPa-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPe";
+                font-weight: bold;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.svg#PorscheNextWPe-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWUr";
+                font-weight: bold;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.svg#PorscheNextWUr-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWAr";
+                font-weight: normal;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.svg#PorscheNextWAr-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPa";
+                font-weight: normal;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.svg#PorscheNextWPa-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPe";
+                font-weight: normal;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.svg#PorscheNextWPe-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWUr";
+                font-weight: normal;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.svg#PorscheNextWUr-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWAr";
+                font-weight: bold;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebArabic/Fonts/PorscheNextWAr-Bold.svg#PorscheNextWAr-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPa";
+                font-weight: bold;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPashto/Fonts/PorscheNextWPa-Bold.svg#PorscheNextWPa-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPe";
+                font-weight: bold;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPersian/Fonts/PorscheNextWPe-Bold.svg#PorscheNextWPe-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWUr";
+                font-weight: bold;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Bold.svg#PorscheNextWUr-Bold") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWAr";
+                font-weight: 100;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.svg#PorscheNextWAr-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPa";
+                font-weight: 100;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.svg#PorscheNextWPa-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPe";
+                font-weight: 100;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.svg#PorscheNextWPe-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWUr";
+                font-weight: 100;
+                font-style: italic;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.svg#PorscheNextWUr-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWAr";
+                font-weight: 100;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebArabic/Fonts/PorscheNextWAr-Regular.svg#PorscheNextWAr-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPa";
+                font-weight: 100;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPashto/Fonts/PorscheNextWPa-Regular.svg#PorscheNextWPa-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWPe";
+                font-weight: 100;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebPersian/Fonts/PorscheNextWPe-Regular.svg#PorscheNextWPe-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "PorscheNextWUr";
+                font-weight: 100;
+                font-style: normal;
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.eot");
+                src: url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/EOT-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-2-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.woff2") format("woff2"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/WOFF-TT/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.woff") format("woff"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/OT-TTF-Web/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.ttf") format("truetype"), url("https://www.porsche.com/fonts/Porsche_Next_Lat-Arabic_Web/SVG-PS/Porsche Next WebUrdu/Fonts/PorscheNextWUr-Regular.svg#PorscheNextWUr-Regular") format("svg");
+                }
+
+                @font-face {
+                font-family: "pag-iconfont";
+                src: url("https://www.porsche.com/fonts/pag-iconfont/pag-iconfont.eot");
+                src: url("https://www.porsche.com/fonts/pag-iconfont/pag-iconfont.eot?#iefix") format("embedded-opentype"), url("https://www.porsche.com/fonts/pag-iconfont/pag-iconfont.woff") format("woff"), url("https://www.porsche.com/fonts/pag-iconfont/pag-iconfont.ttf") format("truetype"), url("https://www.porsche.com/fonts/pag-iconfont/pag-iconfont.svg#pag-iconfont") format("svg");
+                }
+        body {
+          background: #fff;
+          font-family: "PorscheNextWLa", 黑体, SimHei, 宋体, SimSun, sans-serif;
+          font-size: 14px;
+          color: #000000;
+          width: 100%;
+          height: 100%;
+        }
+.app-head {
+  background: #363636;
+  color: #b2b2b2;
+  height: 90px;
+  line-height: 90px;
+  width: 100%;
+}
+.app-head-inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+.head-logo {
+  float: left;
+}
+.app-head-inner img {
+  width: 50px;
+  margin-top: 20px;
+}
+.head-nav {
+  float: right;
+}
+.head-nav ul {
+  overflow: hidden;
+}
+.head-nav li {
+  cursor: pointer;
+  float: left;
+}
+.nav-pile {
+  padding: 0 10px;
+}
+.app-foot {
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  line-height: 80px;
+  background: #e3e4e8;
+  clear: both;
+  margin-top: 30px;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.hr {
+  height: 1px;
+  width: 100%;
+  background: #ddd;
+}
+.button {
+  background: #4fc08d;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.porsche-content {
+  overflow: hidden;
+}
+.button:hover {
+  background: #4fc08d;
+}
+.g-form {
+
+}
+.g-form-line {
+  padding: 15px 0;
+}
+.g-form-label {
+  width: 100px;
+  font-size: 16px;
+  display: inline-block;
+}
+.g-form-input {
+  display: inline-block;
+}
+.g-form-input input {
+  height: 30px;
+  width: 200px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+}
+.but-collan {
+  background: #15577e!important;
+}
+.but-col{
+  background: #313639!important;
+}
+.verification {
+  /*width: 270px;*/
+  margin: 0 auto;
+  margin-bottom: 10px;
+  color: red;
+}
+.g-form-btn {
+  padding-left: 100px;
+}
+.g-form-error {
+  color: red;
+  padding-left: 15px;
+}
+
+.ui-copyright, .ui-copyright a {
+    color: #fff;
+}
+.ui-copyright {
+    background-color: #000000;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 12px!important;
+}
+.swiper-pagination  span{
+  margin: 0 5px;
+}
+address, blockquote, dl, fieldset, figure, hr, ol, p, pre {
+    margin: 0 0 5px!important;
+}
+.ui-copyright a {
+    margin-left: 10px;
+}
+
+.ui-copyright, .ui-copyright a {
+    color: #fff;
+}
+.clear {
+  clear: both;
+}
+a, ins {
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+.main-btn {
+    background: #d5001c;
+    color: #fff;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    width: 270px;
+    text-align: center;
+        cursor: pointer;
+}
+
+
+.mobileSelect {
+  position: relative;
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.4s, z-index 0.4s;
+  transition: opacity 0.4s, z-index 0.4s;
+}
+.mobileSelect * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mobileSelect .grayLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #eee;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 888;
+  display: block;
+}
+.mobileSelect .content {
+  width: 100%;
+  display: block;
+  position: fixed;
+  z-index: 889;
+  color: black;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  bottom: -350px;
+  left: 0;
+  background: white;
+}
+.mobileSelect .content .fixWidth {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.mobileSelect .content .fixWidth:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.mobileSelect .content .btnBar {
+  /*border-bottom: 1px solid #DCDCDC;*/
+  font-size: 15px;
+  height: 45px;
+  position: relative;
+  text-align: center;
+  line-height: 45px;
+}
+.mobileSelect .content .btnBar .cancel,
+.mobileSelect .content .btnBar .ensure {
+  height: 45px;
+  width: 55px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+.mobileSelect .content .btnBar .cancel {
+  left: 0;
+  color: #666;
+}
+.mobileSelect .content .btnBar .ensure {
+  right: 0;
+  color: #1e83d3;
+}
+.mobileSelect .content .btnBar .title {
+  font-size: 15px;
+  padding: 0 15%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mobileSelect .content .panel:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.mobileSelect .content .panel .wheels {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.mobileSelect .content .panel .wheel {
+  position: relative;
+  z-index: 0;
+  float: left;
+  width: 50%;
+  height: 120px;
+  overflow: hidden;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.mobileSelect .content .panel .wheel .selectContainer {
+  display: block;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.18s ease-out;
+  transition: -webkit-transform 0.18s ease-out;
+  transition: transform 0.18s ease-out;
+  transition: transform 0.18s ease-out, -webkit-transform 0.18s ease-out;
+}
+.mobileSelect .content .panel .wheel .selectContainer li {
+  font-size: 15px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mobileSelect .content .panel .selectLine {
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  pointer-events: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+}
+.mobileSelect .content .panel .shadowMask {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(rgba(255, 255, 255, 0)), to(#ffffff));
+  background: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+  opacity: 0.8;
+  pointer-events: none;
+}
+.item-avatar {
+  object-fit: cover;
+}
+.mobileSelect-show {
+  opacity: 1;
+  z-index: 10000;
+  visibility: hidden;
+}
+.swiper-container2A > .swiper-pagination > .swiper-pagination-bullet {
+    background:#090a0a!important;
+}
+
+.swiper-container2A > .swiper-pagination > .swiper-pagination-bullet-active {
+    background:#000!important;
+}
+
+.cover {
+  object-fit: cover;
+  height: 100%;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  right: -35px!important;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  left: -35px!important;
+}
+.icon-xiangqu {
+  font-size: 13px;
+  color: red;
+  margin-right: 2px;
+}
+.policy-p {
+  margin-top: 10px!important;
+}
+.mobileSelect-show .content {
+  bottom: 0;
+}
+.swiper-pagination-bullet-active {
+  background: #ffffff!important;
+}
+input[type="radio"], input[type="checkbox"] {
+  margin: 0!important
+}
+.main-btn {
+  background: #313639;
+}
+.main-btn:hover {
+  background: #d5001c!important;
+}
+.ui-btn {
+  background: #313639!important;
+}
+.emotion-span {
+        position: absolute;
+        left: -60px;
+        bottom: 4px;
+}
+.enjoyFmemotion-left-bottom span:first-child {
+  /*width: 300px!important;*/
+}
+.but-collan {
+    background: #15577e!important;
+}
+.lsss {
+  background:#adadad!important
+}
+.el-pagination.is-background .el-pager li:hover {
+  background-color: #d5001c!important;
+    color: #fff!important;
+}
+.el-pagination.is-background .el-pager li.active {
+    background-color: #959899!important;
+    color: #fff;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+       margin: 0;
+}
+.common-content-app {
+  background:#e3e4e4!important;
+}
+.comment-item .comment-info {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.article-nrtext img {
+  width: 100%;
+  height: 100%;
+}
+.comment-info textarea {
+  background: #eff0f1;
+  resize:none;
+}
+.app-mainbtn:hover{
+   background:#d5001c!important;
+}
+.comment-images .comment-images-container {
+  padding-top: 0px!important;
+}
+.item-contentthe {
+      padding: 15px 15px 0px 15px!important;
+}
+.comment-images .comment-images-container .jia-add:last-child {
+  background: #e3e4e4!important;
+  border: 1px solid #a3a3a3;
+  margin-right: 10px;
+}
+.el-button--primary {
+  background-color: #d5001c!important;
+  border-color:  #d5001c!important;
+
+}
+.el-icon-warning:before {
+  color: #d5001c!important;
+}
+.el-icon-close:hover{
+  color: #d5001c!important;
+}
+.el-button--default:hover {
+  background-color: #fff!important;
+  border-color:  #000!important;
+  color:  #000!important;
+}
+.el-icon-warning {
+  display: none!important;
+}
+.icon-xin1 {
+  color: #ff0604;
+  font-size: 13px;
+  margin-right: 2px;
+}
+.el-icon-close:before{
+  content: '' !important;
+}
+
+/*新增加的样式*/
+.el-dialog__wrapper .el-icon-close:before{
+        content: '\E60F' !important;
+}
+
+.el-dialog__wrapper .el-dialog__header {
+        border-bottom: 1px solid #cccccc;
+}
+.el-dialog__wrapper.SignUp .el-dialog__header{
+        padding: 0;
+        border: 0;
+}
+.el-dialog__wrapper .el-input__inner {
+      opacity: 1;
+}
+.el-dialog--center .el-dialog__body{
+  padding: 5px 20px !important;
+}
+.demo-ruleForm{
+  padding: 0 10px 0 0;
+  margin-bottom: 5px;
+}
+.data-agree{
+  border-top:1px solid #b5b4ba;
+  line-height:35px;
+}
+.article-nrtext img{
+  display: block;
+}
+.el-dialog,
+.el-dialog__body,
+.el-dialog__footer{
+  color: #000 !important;
+}
+.el-dialog__headerbtn {
+        right: 10px !important;
+        top: 10px !important;
+        font-size: 20px !important;
+}
+.el-checkbox__input.is-checked+.el-checkbox__label {
+   color: #000 !important;
+}
+.el-checkbox{
+   color: #000000 !important;
+}
+.el-checkbox__inner::after {
+  border: 1px solid red !important;
+  border-left: none !important;
+  border-top: none !important;
+}
+
+.el-checkbox__inner {
+  border-color: #000000 !important;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: #ffffff !important;
+  border-color: #000000 !important;
+}
+.el-form-item.is-success .el-input__inner,
+.el-form-item.is-success .el-input__inner:focus,
+.el-form-item.is-success .el-textarea__inner,
+.el-form-item.is-success .el-textarea__inner:focus{
+        border-color: #000 !important;
+}
+.el-select .el-input.is-focus .el-input__inner {
+        border-color: #000 !important;
+}
+.el-select-dropdown .el-scrollbar__wrap {
+        overflow-x: scroll !important;
+}
+.el-scrollbar__wrap {
+        overflow-x: hidden !important;
+}
+/*报名信息*/
+.infoDialog .el-dialog__header,
+.succeedDialog .el-dialog__header,
+.applyDialog .el-dialog__header,
+.cancelDialog .el-dialog__header,
+.succeedCancelDialog .el-dialog__header{
+  border-bottom: none;
+}
+
+.infoDialog  .el-button--mini, .el-button--mini.is-round {
+        padding: 7px 4px;
+}
+.succeed-con p{
+  line-height: 25px;
+}
+/*隐私政策*/
+ .privacyDialog .el-dialog--center .el-dialog__body{
+   height: 380px;
+         overflow-y: scroll;
+ }
+.privacyDialog .el-dialog--center .el-dialog__body p{
+  line-height: 25px;
+}
+.el-dialog__footer {
+  padding: 5px 20px 20px !important;
+}
+
+.dialog-footer .el-button,
+.dialog-footer .el-button:visited{
+  background: #313639;
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  -webkit-transition: .1s;
+  transition: .1s;
+  font-weight: 500;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 0px;
+  width: 100%;
+  color: #ffffff;
+}
+.dialog-footer .el-button:hover {
+  background: #d5001c;
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  -webkit-transition: .1s;
+  transition: .1s;
+  font-weight: 500;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 0px;
+  width: 100%;
+  color: #ffffff;
+}
+
+
+.cancelFooter .el-button,
+.cancelFooter .el-button:visited,
+.cancelFooter .el-button:hover{
+        background: #313639 !important;
+        display: inline-block !important;
+        white-space: nowrap !important;
+        cursor: pointer !important;
+        border: 1px solid #dcdfe6 !important;
+        color: #606266 !important;
+        -webkit-appearance: none !important;
+        text-align: center !important;
+        -webkit-box-sizing: border-box !important;
+        box-sizing: border-box !important;
+        outline: 0 !important;
+        margin: 0 !important;
+        -webkit-transition: .1s !important;
+        transition: .1s !important;
+        font-weight: 500 !important;
+        padding: 12px 20px !important;
+        font-size: 16px !important;
+        border-radius: 0px !important;
+        width: 40% !important;
+        color: #ffffff !important;
+}
+
+.article-nrtext h3,.article-nrtext p,.article-nrtext div,.article-nrtext h4{
+        font-size: 15px;
+        line-height:1.5;
+        word-wrap: break-word;
+}
+
+.back {
+        display: none;
+}
+.dataBox{
+        position: absolute;
+        top: 12px;
+        right: 10px;
+}
+.el-date-editor.el-input,
+.el-date-editor.el-input__inner{
+        width: 40px !important;
+}
+/*.el-input{*/
+        /*font-size: 24px !important;*/
+/*}*/
+/*.el-input__inner{*/
+        /*opacity: 0;*/
+/*}*/
+/*.el-input__prefix,*/
+/*.el-input__suffix{*/
+        /*color: #000 !important;*/
+/*}*/
+
+/*.el-input--prefix .el-input__inner,*/
+/*.el-input--suffix .el-input__inner{*/
+        /*padding: 0px !important;*/
+/*}*/
+.el-icon-date:before {
+        display: none;
+}
+
+/*日历插件*/
+.__vev_calendar-wrapper .events-wrapper{
+        display:none;
+}
+.__vev_calendar-wrapper .cal-wrapper{
+        width:100% !important;
+        padding:0 !important;
+}
+.Vue-event-calendar{
+        position:absolute !important;
+        top:50px !important;
+        right:0 !important;
+        z-index: 99999 !important;
+        width:350px !important;
+        height: 370px !important;
+        border:1px solid #ccc !important;
+        background:white !important;
+}
+.__vev_calendar-wrapper .cal-wrapper .cal-body .weeks .item {
+        line-height: 40px !important;
+        float: left !important;
+        width: 14.285% !important;
+}
+.__vev_calendar-wrapper .cal-wrapper .date-num {
+        line-height: 40px !important;
+}
+
+.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .is-today
+ {
+        content: "" !important;
+        border: none !important;
+        background-color: #eff0f1 !important;
+        border-radius: 50% !important;
+        width: 36px !important;
+        height: 36px !important;
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        z-index: 1 !important;
+        margin-left: -18px !important;
+        margin-top: -19px !important;
+}
+
+
+.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .is-event{
+        content: "" !important;
+        background-color: #950014 !important;
+        border-radius: 50% !important;
+        opacity: .8 !important;
+        width: 8px !important;
+        height: 8px !important;
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        z-index: 2 !important;
+        margin-left: -2px !important;
+        margin-top: 8px !important;
+        /*border: 1px solid #950014 !important;*/
+}
+
+.date-num{
+        color: #000000 !important;
+}
+
+
+.crop-info{
+        display: none !important;
+}
+@media (max-width: 768px) {
+.el-checkbox__label {
+        font-size: 12px !important;
+}
+.back {
+        display: block;
+}
+.back {
+        position: fixed;
+        z-index: 30;
+        right: 65px;
+        top:20px;
+        margin-top: -20px;
+        padding: 15px 0;
+        width: 25px;
+
+}
+.back-con{
+        width: 30px;
+        height: 15px;
+        display: block;
+}
+.back-con img{
+        width: 14px;
+        height: 25px;
+}
+
+
+  .article-nrtext img {
+    width: 100%;
+    height: 100%;
+  }
+        video{
+                margin-top:-9px;
+                margin-bottom:-9px;
+        }
+  .app-mainbtn:hover{
+     background:#424242!important;
+  }
+  .el-pagination.is-background .el-pager li:hover {
+    background-color: #f4f4f5!important;
+      color: #606266!important;
+  }
+  .el-pagination.is-background .el-pager li.active {
+      background-color: #959899!important;
+      color: #fff!important;
+  }
+  .el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+     min-width: 21px!important;
+  }
+  .el-pagination.is-background .el-pager li {
+    min-width: 21px!important;
+  }
+  .el-pagination button,.el-pager li{
+    height: 21px!important;
+    line-height: 21px!important;
+  }
+  .el-message-box {
+    width: 280px!important;
+  }
+  .emotion-span {
+    position: relative;
+    right: none;
+  }
+  .porsche-home > .swiper-container1 > .swiper-pagination {
+    display: none;
+  }
+  .mobileSelect-show {
+    visibility: visible;
+  }
+  .parsche-login {
+    position: relative!important;
+  }
+  .upload-container-title-appa textarea{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0px;
+    outline: none;
+    background: #eff0f1;
+    font-size: 16px;
+    resize: none;
+    line-height: 33px;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    background: #ffffff;
+  }
+        .Vue-event-calendar{
+                position:absolute !important;
+                top:55px !important;
+                right:0 !important;
+                z-index: 99999 !important;
+                width:76% !important;
+                height: 310px !important;
+                border:1px solid #ccc !important;
+                background:white !important;
+        }
+        .__vev_calendar-wrapper .cal-wrapper .cal-body .weeks .item {
+                line-height: 20px !important;
+                float: left !important;
+                width: 14.285% !important;
+        }
+        .__vev_calendar-wrapper .cal-wrapper .date-num {
+                line-height: 33px !important;
+        }
+
+}
